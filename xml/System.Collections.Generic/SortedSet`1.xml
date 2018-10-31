@@ -1580,7 +1580,7 @@
 ## Remarks  
  `match` must not modify the <xref:System.Collections.Generic.SortedSet%601>. Doing so can cause unexpected results.  
   
- Calling this method is an O(`n`) operation, where `n` is <xref:System.Collections.Generic.SortedSet%601.Count%2A>.  
+ Calling this method is an O(n) operation, where `n` is <xref:System.Collections.Generic.SortedSet%601.Count%2A>.  
   
    
   
@@ -1689,7 +1689,7 @@
 ## Remarks  
  This method ignores the order of elements and any duplicate elements in `other`.  
   
- If the collection represented by `other` is a <xref:System.Collections.Generic.SortedSet%601> collection with the same equality comparer as the current <xref:System.Collections.Generic.SortedSet%601> object, this method is an O(log`n`) operation. Otherwise, this method is an O(`n` + `m`) operation, where `n` is the number of elements in `other` and `m` is <xref:System.Collections.Generic.SortedSet%601.Count%2A>.  
+ If the collection represented by `other` is a <xref:System.Collections.Generic.SortedSet%601> collection with the same equality comparer as the current <xref:System.Collections.Generic.SortedSet%601> object, this method is an O(log n) operation. Otherwise, this method is an O(n + m) operation, where `n` is the number of elements in `other` and `m` is <xref:System.Collections.Generic.SortedSet%601.Count%2A>.  
   
  ]]></format>
         </remarks>
@@ -1739,7 +1739,7 @@
 ## Remarks  
  Any duplicate elements in `other` are ignored.  
   
- If the `other` parameter is a <xref:System.Collections.Generic.SortedSet%601> collection with the same equality comparer as the current <xref:System.Collections.Generic.SortedSet%601> object, this method is an O(n log `m`) operation. Otherwise, this method is an O(`n` log `m`) + O(`n` log `n`) operation, where `n` is the number of elements in `other` and `m` is <xref:System.Collections.Generic.SortedSet%601.Count%2A>.  
+ If the `other` parameter is a <xref:System.Collections.Generic.SortedSet%601> collection with the same equality comparer as the current <xref:System.Collections.Generic.SortedSet%601> object, this method is an O(n log m) operation. Otherwise, this method is an O(n log m) + O(n log n) operation, where `n` is the number of elements in `other` and `m` is <xref:System.Collections.Generic.SortedSet%601.Count%2A>.  
   
  ]]></format>
         </remarks>
@@ -1788,7 +1788,7 @@
 ## Remarks  
  This member is an explicit interface member implementation. It can be used only when the <xref:System.Collections.Generic.SortedSet%601> instance is cast to an <xref:System.Collections.Generic.ICollection%601> interface.  
   
- If <xref:System.Collections.Generic.List%601.Count%2A> is less than <xref:System.Collections.Generic.List%601.Capacity%2A>, this method is an O(1) operation. If the capacity must be increased to accommodate the new element, this method becomes an O(`n`) operation, where `n` is <xref:System.Collections.Generic.List%601.Count%2A>.  
+ If <xref:System.Collections.Generic.List%601.Count%2A> is less than <xref:System.Collections.Generic.List%601.Capacity%2A>, this method is an O(1) operation. If the capacity must be increased to accommodate the new element, this method becomes an O(n) operation, where `n` is <xref:System.Collections.Generic.List%601.Count%2A>.  
   
  ]]></format>
         </remarks>
