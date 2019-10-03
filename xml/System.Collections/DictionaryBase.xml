@@ -7,7 +7,6 @@
   <TypeSignature Language="F#" Value="type DictionaryBase = class&#xA;    interface IDictionary&#xA;    interface ICollection&#xA;    interface IEnumerable" />
   <AssemblyInfo>
     <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-    <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <AssemblyVersion>4.0.1.0</AssemblyVersion>
     <AssemblyVersion>4.1.0.0</AssemblyVersion>
     <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -22,28 +21,21 @@
   <AssemblyInfo>
     <AssemblyName>netstandard</AssemblyName>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
-    <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
   <Interfaces>
     <Interface>
-      <InterfaceName>System.Collections.ICollection</InterfaceName>
-    </Interface>
-    <Interface>
       <InterfaceName>System.Collections.IDictionary</InterfaceName>
-    </Interface>
-    <Interface>
-      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
     </Interface>
   </Interfaces>
   <Attributes>
     <Attribute FrameworkAlternate="netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
       <AttributeName>System.Runtime.InteropServices.ComVisible(true)</AttributeName>
     </Attribute>
-    <Attribute FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;netframework-4.8;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0">
-      <AttributeName>System.Serializable</AttributeName>
+    <Attribute FrameworkAlternate="netframework-1.1;netframework-2.0;netframework-3.0;netframework-3.5;netframework-4.0;netframework-4.5;netframework-4.5.1;netframework-4.5.2;netframework-4.6;netframework-4.6.1;netframework-4.6.2;netframework-4.7;netframework-4.7.1;netframework-4.7.2;xamarinandroid-7.1;xamarinios-10.8;xamarinmac-3.0;netframework-4.8">
+      <AttributeName>Serializable</AttributeName>
     </Attribute>
   </Attributes>
   <Docs>
@@ -51,12 +43,8 @@
     <remarks>
       <format type="text/markdown"><![CDATA[  
   
-## Remarks
-
-> [!IMPORTANT]
->  We don't recommend that you use the `DictionaryBase` class for new development. Instead, we recommend that you use the generic <xref:System.Collections.Generic.Dictionary%602> or <xref:System.Collections.ObjectModel.KeyedCollection%602> class . For more information, see [Non-generic collections shouldn't be used](https://github.com/dotnet/platform-compat/blob/master/docs/DE0006.md) on GitHub.
-
-The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statement and the Visual Basic [For Each](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) statement return an object of the type of the elements in the collection. Since each element of the <xref:System.Collections.DictionaryBase> is a key/value pair, the element type is not the type of the key or the type of the value. Instead, the element type is <xref:System.Collections.DictionaryEntry>.  
+## Remarks  
+ The foreach statement of the C# language (for each in Visual Basic) returns an object of the type of the elements in the collection. Since each element of the <xref:System.Collections.DictionaryBase> is a key/value pair, the element type is not the type of the key or the type of the value. Instead, the element type is <xref:System.Collections.DictionaryEntry>.  
   
  The `foreach` statement is a wrapper around the enumerator, which only allows reading from, not writing to, the collection.  
   
@@ -99,7 +87,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -114,7 +101,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -123,7 +109,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- This constructor is an O(1) operation.  
+ This constructor is an `O(1)` operation.  
   
  ]]></format>
         </remarks>
@@ -142,7 +128,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -157,7 +142,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -171,7 +155,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
 ## Remarks  
  <xref:System.Collections.DictionaryBase.Count%2A> is set to zero, and references to other objects from elements of the collection are also released.  
   
- This method is an O(`n`) operation, where `n` is <xref:System.Collections.DictionaryBase.Count%2A>.  
+ This method is an `O(n)` operation, where `n` is <xref:System.Collections.DictionaryBase.Count%2A>.  
   
  ]]></format>
         </remarks>
@@ -189,7 +173,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -204,7 +187,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -215,7 +197,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Parameters>
       <Docs>
         <param name="array">The one-dimensional <see cref="T:System.Array" /> that is the destination of the <see cref="T:System.Collections.DictionaryEntry" /> objects copied from the <see cref="T:System.Collections.DictionaryBase" /> instance. The <see cref="T:System.Array" /> must have zero-based indexing.</param>
-        <param name="index">The zero-based index in <paramref name="array" /> at which copying begins.</param>
+        <param name="index">The zero-based index in <c>array</c> at which copying begins.</param>
         <summary>Copies the <see cref="T:System.Collections.DictionaryBase" /> elements to a one-dimensional <see cref="T:System.Array" /> at the specified index.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -223,7 +205,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
 ## Remarks  
  The elements are copied to the <xref:System.Array> in the same order in which the enumerator iterates through the <xref:System.Collections.DictionaryBase>.  
   
- This method is an O(`n`) operation, where `n` is <xref:System.Collections.DictionaryBase.Count%2A>.  
+ This method is an `O(n)` operation, where `n` is <xref:System.Collections.DictionaryBase.Count%2A>.  
   
  ]]></format>
         </remarks>
@@ -256,7 +238,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -271,7 +252,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -283,7 +263,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- Retrieving the value of this property is an O(1) operation.  
+ Retrieving the value of this property is an `O(1)` operation.  
   
  ]]></format>
         </remarks>
@@ -299,7 +279,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -314,7 +293,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IDictionary</ReturnType>
@@ -328,7 +306,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
 ## Remarks  
  The On* methods are invoked only on the instance returned by the <xref:System.Collections.DictionaryBase.Dictionary%2A> property, but not on the instance returned by the <xref:System.Collections.DictionaryBase.InnerHashtable%2A> property.  
   
- Retrieving the value of this property is an O(1) operation.  
+ Retrieving the value of this property is an `O(1)` operation.  
   
    
   
@@ -356,7 +334,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -371,7 +348,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IDictionaryEnumerator</ReturnType>
@@ -398,7 +374,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  The enumerator does not have exclusive access to the collection; therefore, enumerating through a collection is intrinsically not a thread-safe procedure.  To guarantee thread safety during enumeration, you can lock the collection during the entire enumeration.  To allow the collection to be accessed by multiple threads for reading and writing, you must implement your own synchronization.  
   
- This method is an O(1) operation.  
+ This method is an `O(1)` operation.  
   
    
   
@@ -425,7 +401,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -440,7 +415,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Hashtable</ReturnType>
@@ -454,7 +428,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
 ## Remarks  
  The On* methods are invoked only on the instance returned by the <xref:System.Collections.DictionaryBase.Dictionary%2A> property, but not on the instance returned by the <xref:System.Collections.DictionaryBase.InnerHashtable%2A> property.  
   
- Retrieving the value of this property is an O(1) operation.  
+ Retrieving the value of this property is an `O(1)` operation.  
   
  ]]></format>
         </remarks>
@@ -470,7 +444,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -485,7 +458,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -501,7 +473,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  The On* methods are invoked only on the instance returned by the <xref:System.Collections.DictionaryBase.Dictionary%2A> property, but not on the instance returned by the <xref:System.Collections.DictionaryBase.InnerHashtable%2A> property.  
   
- The default implementation of this method is an O(1) operation.  
+ The default implementation of this method is an `O(1)` operation.  
   
  ]]></format>
         </remarks>
@@ -526,7 +498,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -541,7 +512,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -557,7 +527,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  The On* methods are invoked only on the instance returned by the <xref:System.Collections.DictionaryBase.Dictionary%2A> property, but not on the instance returned by the <xref:System.Collections.DictionaryBase.InnerHashtable%2A> property.  
   
- The default implementation of this method is an O(1) operation.  
+ The default implementation of this method is an `O(1)` operation.  
   
  ]]></format>
         </remarks>
@@ -580,7 +550,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -595,7 +564,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -606,7 +574,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Parameters>
       <Docs>
         <param name="key">The key of the element to get.</param>
-        <param name="currentValue">The current value of the element associated with <paramref name="key" />.</param>
+        <param name="currentValue">The current value of the element associated with <c>key</c>.</param>
         <summary>Gets the element with the specified key and value in the <see cref="T:System.Collections.DictionaryBase" /> instance.</summary>
         <returns>An <see cref="T:System.Object" /> containing the element with the specified key and value.</returns>
         <remarks>
@@ -617,7 +585,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  The On* methods are invoked only on the instance returned by the <xref:System.Collections.DictionaryBase.Dictionary%2A> property, but not on the instance returned by the <xref:System.Collections.DictionaryBase.InnerHashtable%2A> property.  
   
- The default implementation of this method is an O(1) operation.  
+ The default implementation of this method is an `O(1)` operation.  
   
  ]]></format>
         </remarks>
@@ -638,7 +606,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -653,7 +620,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -674,7 +640,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  The On* methods are invoked only on the instance returned by the <xref:System.Collections.DictionaryBase.Dictionary%2A> property, but not on the instance returned by the <xref:System.Collections.DictionaryBase.InnerHashtable%2A> property.  
   
- The default implementation of this method is an O(1) operation.  
+ The default implementation of this method is an `O(1)` operation.  
   
    
   
@@ -709,7 +675,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -724,7 +689,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -745,7 +709,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  The On* methods are invoked only on the instance returned by the <xref:System.Collections.DictionaryBase.Dictionary%2A> property, but not on the instance returned by the <xref:System.Collections.DictionaryBase.InnerHashtable%2A> property.  
   
- The default implementation of this method is an O(1) operation.  
+ The default implementation of this method is an `O(1)` operation.  
   
  ]]></format>
         </remarks>
@@ -768,7 +732,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -783,7 +746,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -804,7 +766,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  The On* methods are invoked only on the instance returned by the <xref:System.Collections.DictionaryBase.Dictionary%2A> property, but not on the instance returned by the <xref:System.Collections.DictionaryBase.InnerHashtable%2A> property.  
   
- The default implementation of this method is an O(1) operation.  
+ The default implementation of this method is an `O(1)` operation.  
   
    
   
@@ -838,7 +800,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -853,7 +814,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -874,7 +834,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  The On* methods are invoked only on the instance returned by the <xref:System.Collections.DictionaryBase.Dictionary%2A> property, but not on the instance returned by the <xref:System.Collections.DictionaryBase.InnerHashtable%2A> property.  
   
- The default implementation of this method is an O(1) operation.  
+ The default implementation of this method is an `O(1)` operation.  
   
  ]]></format>
         </remarks>
@@ -897,7 +857,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -912,7 +871,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -924,8 +882,8 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Parameters>
       <Docs>
         <param name="key">The key of the element to locate.</param>
-        <param name="oldValue">The old value of the element associated with <paramref name="key" />.</param>
-        <param name="newValue">The new value of the element associated with <paramref name="key" />.</param>
+        <param name="oldValue">The old value of the element associated with <c>key</c>.</param>
+        <param name="newValue">The new value of the element associated with <c>key</c>.</param>
         <summary>Performs additional custom processes before setting a value in the <see cref="T:System.Collections.DictionaryBase" /> instance.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -935,7 +893,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  The On* methods are invoked only on the instance returned by the <xref:System.Collections.DictionaryBase.Dictionary%2A> property, but not on the instance returned by the <xref:System.Collections.DictionaryBase.InnerHashtable%2A> property.  
   
- The default implementation of this method is an O(1) operation.  
+ The default implementation of this method is an `O(1)` operation.  
   
    
   
@@ -970,7 +928,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -985,7 +942,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -997,8 +953,8 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Parameters>
       <Docs>
         <param name="key">The key of the element to locate.</param>
-        <param name="oldValue">The old value of the element associated with <paramref name="key" />.</param>
-        <param name="newValue">The new value of the element associated with <paramref name="key" />.</param>
+        <param name="oldValue">The old value of the element associated with <c>key</c>.</param>
+        <param name="newValue">The new value of the element associated with <c>key</c>.</param>
         <summary>Performs additional custom processes after setting a value in the <see cref="T:System.Collections.DictionaryBase" /> instance.</summary>
         <remarks>
           <format type="text/markdown"><![CDATA[  
@@ -1008,7 +964,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  The On* methods are invoked only on the instance returned by the <xref:System.Collections.DictionaryBase.Dictionary%2A> property, but not on the instance returned by the <xref:System.Collections.DictionaryBase.InnerHashtable%2A> property.  
   
- The default implementation of this method is an O(1) operation.  
+ The default implementation of this method is an `O(1)` operation.  
   
  ]]></format>
         </remarks>
@@ -1031,7 +987,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -1046,7 +1001,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1067,7 +1021,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  The On* methods are invoked only on the instance returned by the <xref:System.Collections.DictionaryBase.Dictionary%2A> property, but not on the instance returned by the <xref:System.Collections.DictionaryBase.InnerHashtable%2A> property.  
   
- The default implementation of this method is an O(1) operation.  
+ The default implementation of this method is an `O(1)` operation.  
   
    
   
@@ -1102,7 +1056,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -1117,7 +1070,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1143,7 +1095,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
  [!code-csharp[System.Collections.DictionaryBase#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.DictionaryBase/CS/source2.cs#3)]
  [!code-vb[System.Collections.DictionaryBase#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.DictionaryBase/VB/source2.vb#3)]  
   
- Retrieving the value of this property is an O(1) operation.  
+ Retrieving the value of this property is an `O(1)` operation.  
   
  ]]></format>
         </remarks>
@@ -1164,7 +1116,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -1179,7 +1130,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -1204,7 +1154,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
  [!code-csharp[System.Collections.DictionaryBase#3](~/samples/snippets/csharp/VS_Snippets_CLR_System/system.Collections.DictionaryBase/CS/source2.cs#3)]
  [!code-vb[System.Collections.DictionaryBase#3](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Collections.DictionaryBase/VB/source2.vb#3)]  
   
- Retrieving the value of this property is an O(1) operation.  
+ Retrieving the value of this property is an `O(1)` operation.  
   
  ]]></format>
         </remarks>
@@ -1224,7 +1174,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -1239,7 +1188,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1260,7 +1208,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  You can also use the <xref:System.Collections.IDictionary.Item%2A> property to add new elements by setting the value of a key that does not exist in the <xref:System.Collections.DictionaryBase>; for example, `myCollection["myNonexistentKey"] = myValue`. However, if the specified key already exists in the <xref:System.Collections.DictionaryBase>, setting the <xref:System.Collections.IDictionary.Item%2A> property overwrites the old value. In contrast, the <xref:System.Collections.IDictionary.Add%2A> method does not modify existing elements.  
   
- This method is an O(1) operation.  
+ This method is an `O(1)` operation.  
   
    
   
@@ -1298,7 +1246,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -1313,7 +1260,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1330,9 +1276,9 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
           <format type="text/markdown"><![CDATA[  
   
 ## Remarks  
- This method is an O(1) operation.  
+ This method is an `O(1)` operation.  
   
- Starting with the .NET Framework 2.0, this method uses the collection's objects' <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods on `key` to determine whether `item` exists. In the earlier versions of the .NET Framework, this determination was made by using the <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods of the `key` parameter on the objects in the collection.  
+ Starting with the .NET Framework 2.0, this method uses the collection’s objects’ <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods on `key` to determine whether `item` exists. In the earlier versions of the .NET Framework, this determination was made by using the <xref:System.Object.Equals%2A> and <xref:System.IComparable.CompareTo%2A> methods of the `key` parameter on the objects in the collection.  
   
    
   
@@ -1363,7 +1309,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -1378,7 +1323,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1395,7 +1339,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  A collection with a fixed size is simply a collection with a wrapper that prevents adding and removing elements; therefore, if changes are made to the underlying collection, including the addition or removal of elements, the fixed-size collection reflects those changes.  
   
- Retrieving the value of this property is an O(1) operation.  
+ Retrieving the value of this property is an `O(1)` operation.  
   
  ]]></format>
         </remarks>
@@ -1414,7 +1358,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -1429,7 +1372,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1446,7 +1388,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  A collection that is read-only is simply a collection with a wrapper that prevents modifying the collection; therefore, if changes are made to the underlying collection, the read-only collection reflects those changes.  
   
- Retrieving the value of this property is an O(1) operation.  
+ Retrieving the value of this property is an `O(1)` operation.  
   
  ]]></format>
         </remarks>
@@ -1465,7 +1407,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -1480,7 +1421,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Object</ReturnType>
@@ -1500,7 +1440,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  You can also use the <xref:System.Collections.IDictionary.Item%2A> property to add new elements by setting the value of a key that does not exist in the <xref:System.Collections.DictionaryBase>; for example, `myCollection["myNonexistentKey"] = myValue`. However, if the specified key already exists in the <xref:System.Collections.DictionaryBase>, setting the <xref:System.Collections.IDictionary.Item%2A> property overwrites the old value. In contrast, the <xref:System.Collections.IDictionary.Add%2A> method does not modify existing elements.  
   
- Retrieving the value of this property is an O(1) operation; setting the property is also an O(1) operation.  
+ Retrieving the value of this property is an `O(1)` operation; setting the property is also an `O(1)` operation.  
   
    
   
@@ -1536,7 +1476,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -1551,7 +1490,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.ICollection</ReturnType>
@@ -1567,7 +1505,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  The returned <xref:System.Collections.ICollection> is not a static copy; instead, the <xref:System.Collections.ICollection> refers back to the keys in the original <xref:System.Collections.DictionaryBase> object. Therefore, changes to the <xref:System.Collections.DictionaryBase> continue to be reflected in the returned <xref:System.Collections.ICollection>.  
   
- Retrieving the value of this property is an O(1) operation.  
+ Retrieving the value of this property is an `O(1)` operation.  
   
    
   
@@ -1596,7 +1534,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -1611,7 +1548,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1628,7 +1564,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
 ## Remarks  
  If the <xref:System.Collections.DictionaryBase> does not contain an element with the specified key, the <xref:System.Collections.DictionaryBase> remains unchanged. No exception is thrown.  
   
- This method is an O(1) operation.  
+ This method is an `O(1)` operation.  
   
    
   
@@ -1666,7 +1602,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -1681,7 +1616,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.ICollection</ReturnType>
@@ -1697,7 +1631,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  The returned <xref:System.Collections.ICollection> is not a static copy; instead, the <xref:System.Collections.ICollection> refers back to the values in the original <xref:System.Collections.DictionaryBase> object. Therefore, changes to the <xref:System.Collections.DictionaryBase> continue to be reflected in the returned <xref:System.Collections.ICollection>.  
   
- Retrieving the value of this property is an O(1) operation.  
+ Retrieving the value of this property is an `O(1)` operation.  
   
    
   
@@ -1726,7 +1660,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       </Implements>
       <AssemblyInfo>
         <AssemblyName>System.Collections.NonGeneric</AssemblyName>
-        <AssemblyVersion>4.0.0.0</AssemblyVersion>
         <AssemblyVersion>4.0.1.0</AssemblyVersion>
         <AssemblyVersion>4.1.0.0</AssemblyVersion>
         <AssemblyVersion>4.1.1.0</AssemblyVersion>
@@ -1741,7 +1674,6 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
       <AssemblyInfo>
         <AssemblyName>netstandard</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
-        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IEnumerator</ReturnType>
@@ -1768,7 +1700,7 @@ The C# [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) statem
   
  The enumerator does not have exclusive access to the collection; therefore, enumerating through a collection is intrinsically not a thread-safe procedure. Even when a collection is synchronized, other threads can still modify the collection, which causes the enumerator to throw an exception. To guarantee thread safety during enumeration, you can either lock the collection during the entire enumeration or catch the exceptions resulting from changes made by other threads.  
   
- This method is an O(1) operation.  
+ This method is an `O(1)` operation.  
   
  ]]></format>
         </remarks>
